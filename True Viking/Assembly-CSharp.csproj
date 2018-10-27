@@ -107,8 +107,11 @@
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\mainMenu.cs" />
+    <Compile Include="Assets\myObjects\destroyer.cs" />
+    <Compile Include="Assets\myObjects\mainMenu.cs" />
     <Compile Include="Assets\myObjects\playerInteraction.cs" />
+    <Compile Include="Assets\myObjects\spawner.cs" />
+    <Compile Include="Assets\myObjects\startBuilder.cs" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\Fog.shader" />
