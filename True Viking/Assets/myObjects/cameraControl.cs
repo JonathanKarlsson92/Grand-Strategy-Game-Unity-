@@ -147,7 +147,7 @@ public class cameraControl : MonoBehaviour {
 
 
         //Debug.Log(transform.eulerAngles+" "+ Mathf.Cos(Mathf.Deg2Rad*transform.eulerAngles.y) + " " + Mathf.Sin(Mathf.Deg2Rad*transform.eulerAngles.y) + " "+centerView);
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
     }
     
 

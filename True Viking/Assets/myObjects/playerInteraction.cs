@@ -60,7 +60,7 @@ public class playerInteraction : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log("we hit" + hit.collider.name + " " + hit.point);
+                //Debug.Log("we hit" + hit.collider.name + " " + hit.point);
             }
             //Debug.Log("we clicked");
 
@@ -74,40 +74,13 @@ public class playerInteraction : MonoBehaviour {
                 //createdObjects.Add(newBuild);
                 isBuilding = false;
                 createdObjects.Add(spawnee);
-                Debug.Log("house built");
+                //Debug.Log("house built");
+                Debug.Log("Number of buildings" + createdObjects.Count);
             }
         }
-        
+
         
     }
-
-    //function to handle the spawn of new buildings
-    /*public void spawner(bool isBuilding, RaycastHit hit)
-    {
-        // todo add a delay
-        if (isBuilding)
-        {
-            Debug.Log("In building mode");
-            if (Input.GetMouseButton(0))
-            {
-               
-                //create and add to list of all created
-                GameObject newBuild=(GameObject)Instantiate(spawnee, hit.point, Quaternion.identity);
-                createdObjects.Add(newBuild);
-                isBuilding = false;
-            }
-        }
-        if (!isBuilding)
-        {
-            // TODO solve the mouse click later
-            if (Input.GetMouseButton(1))
-            {
-                //Debug.Log("spawner running" + isBuilding);
-                isBuilding = true;
-            }
-        }
-        
-    }*/
 
     public void activateBuilder()
     {
@@ -118,12 +91,13 @@ public class playerInteraction : MonoBehaviour {
             newBuild = Instantiate(spawnee);
         }
     }
-   /* public void activateBuilderTree()
-    {
-        if (!isBuilding)
-        {
-            isBuilding = true;
-            Debug.Log("Button2 clicked");
-        }
-    }*/
-}
+
+        /* public void activateBuilderTree()
+         {
+             if (!isBuilding)
+             {
+                 isBuilding = true;
+                 Debug.Log("Button2 clicked");
+             }
+         }*/
+    }
