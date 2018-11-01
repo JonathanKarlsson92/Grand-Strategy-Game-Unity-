@@ -110,8 +110,8 @@
     <Compile Include="Assets\myObjects\cameraControl.cs" />
     <Compile Include="Assets\myObjects\mainMenu.cs" />
     <Compile Include="Assets\myObjects\natureSimulator.cs" />
-    <Compile Include="Assets\myObjects\Not used\destroyer.cs" />
-    <Compile Include="Assets\myObjects\Not used\spawner.cs" />
+    <Compile Include="Assets\myObjects\NotUsed\destroyer.cs" />
+    <Compile Include="Assets\myObjects\NotUsed\spawner.cs" />
     <Compile Include="Assets\myObjects\playerInteraction.cs" />
     <Compile Include="Assets\myObjects\roadNetwork.cs" />
     <Compile Include="Assets\myObjects\simulationTimer.cs" />
