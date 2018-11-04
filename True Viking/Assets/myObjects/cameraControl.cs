@@ -8,13 +8,13 @@ public class cameraControl : MonoBehaviour {
     Camera cam;
 
 
-    public float zoomSpeed = 4f;
+    public float zoomSpeed = 10f;
     public float rotationSpeed = 1f;
 
     public float pitch = 2f;
 
     private float minZoom = 0.2f;
-    private float maxZoom = 4f;
+    private float maxZoom = 100f;
 
     private float currentZoom = 1f;  
     private float currentYaw = 0f;

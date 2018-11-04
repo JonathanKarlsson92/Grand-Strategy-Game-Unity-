@@ -32,7 +32,7 @@ public class natureSimulator : MonoBehaviour {
 
 
 
-        if (localTimer >tempTime+5) //simulation step
+        if (localTimer >tempTime+60) //simulation step
         {
             tempTime = localTimer;
             Transform treeList = transform.Find("Trees");
