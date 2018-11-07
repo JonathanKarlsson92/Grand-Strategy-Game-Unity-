@@ -39,7 +39,7 @@ public class treeProperties : MonoBehaviour {
             if (gameObject.transform.localScale.x<maxScale)
             {
                 gameObject.transform.localScale = Vector3.Scale(transform.localScale, new Vector3(1.15f, 1.15f, 1.15f));
-                Debug.Log("Age:" + age);
+                //Debug.Log("Age:" + age);
                 
 
             }

@@ -50,7 +50,7 @@ public class natureSimulator : MonoBehaviour {
             }
 
             //Transform treeObj = gameObject.GetComponentInChildren(typeof(Transform)) as Transform;
-            Debug.Log("tree folder: " +treeList.childCount);
+            //Debug.Log("tree folder: " +treeList.childCount);
             
             //Debug.Log("Number of trees"+treeObj.childCount);
             /*for (int i=0; i< treeObj.childCount; i++) //Handle all trees
