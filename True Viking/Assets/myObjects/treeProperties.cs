@@ -13,7 +13,7 @@ public class treeProperties : MonoBehaviour {
     private int localTimer = simulationTimer.getTimerSec();
     private int maxScale = 2;
 
-
+   
     // Use this for initialization
     void Start () {
 

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class playerInteraction : MonoBehaviour {
 
     //public LayerMask mask;
     Camera cam;
+    //resourceManager resources;
 
     // object to spawn
     public GameObject spawnee;
@@ -76,6 +78,9 @@ public class playerInteraction : MonoBehaviour {
                 createdObjects.Add(spawnee);
                 //Debug.Log("house built");
                 Debug.Log("Number of buildings" + createdObjects.Count);
+               
+                //remove gold from treasury
+                resourceManager.AddExpense(100);
             }
         }
 

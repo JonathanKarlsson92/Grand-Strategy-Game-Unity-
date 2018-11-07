@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class natureSimulator : MonoBehaviour {
-    //add this script to new trees and objects created
+
+    public static int maxNrOfTrees = 30; //limit number of trees to prevent crash
 
     simulationTimer sim;
     //TODO change to Nature object containing model, position etc
@@ -38,15 +39,19 @@ public class natureSimulator : MonoBehaviour {
             Transform treeList = transform.Find("Trees");
 
             int number = treeList.childCount; //number of trees in trees folder
-            for (int i = 0; i < number; i++)
+
+            if (number < maxNrOfTrees)  //limit the number of trees on map
             {
-                var tempObj=Instantiate(spawner,treeList.GetChild(i).position + new Vector3(Random.Range(-5.0f, 5.0f), 0, Random.Range(-5.0f, 5.0f)), treeList.GetChild(i).rotation);
+                for (int i = 0; i < number; i++)
+                {
+                    var tempObj = Instantiate(spawner, treeList.GetChild(i).position + new Vector3(Random.Range(-5.0f, 5.0f), 0, Random.Range(-5.0f, 5.0f)), treeList.GetChild(i).rotation);
 
-                // var tempObj=Instantiate(spawner, treeObj.position + new Vector3(Random.Range(-5.0f, 5.0f), 0, Random.Range(-5.0f, 5.0f)), treeObj.rotation);
+                    // var tempObj=Instantiate(spawner, treeObj.position + new Vector3(Random.Range(-5.0f, 5.0f), 0, Random.Range(-5.0f, 5.0f)), treeObj.rotation);
 
-                tempObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                    tempObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
-                tempObj.transform.parent = treeList;
+                    tempObj.transform.parent = treeList;
+                }
             }
 
             //Transform treeObj = gameObject.GetComponentInChildren(typeof(Transform)) as Transform;
