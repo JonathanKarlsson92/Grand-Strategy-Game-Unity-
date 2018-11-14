@@ -8,19 +8,19 @@ public class cameraControl : MonoBehaviour {
     Camera cam;
 
 
-    public float zoomSpeed = 10f;
+    public float zoomSpeed = 1000f;
     public float rotationSpeed = 1f;
 
     public float pitch = 2f;
 
-    private float minZoom = 0.2f;
-    private float maxZoom = 100f;
+    private float minZoom = 5f;
+    private float maxZoom = 50f;
 
-    private float currentZoom = 5f;  
+    private float currentZoom = 40f;  
     private float currentYaw = 0f;
 
     private Vector3 offset=new Vector3(0,3,3);
-    private Vector3 centerView = new Vector3(0, 0, 0);
+    private Vector3 centerView = new Vector3(200, 0, 200);
     
 
     private float TargetAngleX = 0f;
@@ -148,6 +148,7 @@ public class cameraControl : MonoBehaviour {
 
         //Debug.Log(transform.eulerAngles+" "+ Mathf.Cos(Mathf.Deg2Rad*transform.eulerAngles.y) + " " + Mathf.Sin(Mathf.Deg2Rad*transform.eulerAngles.y) + " "+centerView);
         //Debug.Log(transform.position);
+        //Debug.Log(currentZoom);
     }
 
    
