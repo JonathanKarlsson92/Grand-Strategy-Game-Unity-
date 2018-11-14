@@ -1,0 +1,8 @@
+[X] Add capacity when building houses 
+
+[]make simple metric for attracting people
+
+[X]spawn people 
+
+[]make then go to the house
+

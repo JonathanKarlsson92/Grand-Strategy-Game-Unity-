@@ -91,6 +91,9 @@ public class buildManager : MonoBehaviour {
                 
                 // Add expense
                 resourceManager.AddExpense(100);
+                //add house in populationManager
+                populationManager.addHouseCapacity(10);
+
             }
 
             //cancel/end build

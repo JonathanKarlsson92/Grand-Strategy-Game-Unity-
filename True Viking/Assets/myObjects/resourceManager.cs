@@ -22,7 +22,7 @@ public class resourceManager : MonoBehaviour {
     {
         goldText.text = "";
     }
-    private void Update()
+    void Update()
     {
         goldText.text = money.ToString();
     }
