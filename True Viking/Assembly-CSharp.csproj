@@ -106,6 +106,7 @@
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\myObjects\buildingProperty.cs" />
     <Compile Include="Assets\myObjects\buildManager.cs" />
     <Compile Include="Assets\myObjects\cameraControl.cs" />
     <Compile Include="Assets\myObjects\humanAnimator.cs" />

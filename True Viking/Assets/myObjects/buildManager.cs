@@ -30,7 +30,7 @@ public class buildManager : MonoBehaviour {
 	void Update () {
         if (isBuilding)
         {
-            Debug.Log(buildRotation);
+            //Debug.Log(buildRotation);
             //plot building on mouse
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -73,7 +73,8 @@ public class buildManager : MonoBehaviour {
                 // create new building(repeate)
                 //buildRotation = newBuild.transform.localRotation;
                 newBuild = Instantiate(spawnee, newBuild.transform.position, newBuild.transform.rotation);
-                
+                newBuild.transform.parent = transform.root.Find("Buildings");
+                //newBuildSupport.GetComponent<Collider>().enabled = true;
                 //newBuildSupport = Instantiate(spawneeSupport);
                 if (buildID > 4)
                 {
@@ -93,6 +94,7 @@ public class buildManager : MonoBehaviour {
                 resourceManager.AddExpense(100);
                 //add house in populationManager
                 populationManager.addHouseCapacity(10);
+                //populationManager.
 
             }
 
@@ -134,6 +136,7 @@ public class buildManager : MonoBehaviour {
             startNode = true;
             Debug.Log("Button1 clicked");
             newBuild = Instantiate(spawnee);
+            newBuild.transform.parent = transform.root.Find("Buildings");
         }
     }
 }

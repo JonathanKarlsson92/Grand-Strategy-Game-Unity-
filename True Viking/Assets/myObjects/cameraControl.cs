@@ -8,8 +8,8 @@ public class cameraControl : MonoBehaviour {
     Camera cam;
 
 
-    public float zoomSpeed = 1000f;
-    public float rotationSpeed = 1f;
+    public float zoomSpeed = 20000f;
+    public float rotationSpeed = 5f;
 
     public float pitch = 2f;
 
@@ -18,6 +18,8 @@ public class cameraControl : MonoBehaviour {
 
     private float currentZoom = 40f;  
     private float currentYaw = 0f;
+
+    private float moveSpeed = 5f;
 
     private Vector3 offset=new Vector3(0,3,3);
     private Vector3 centerView = new Vector3(200, 0, 200);
@@ -45,28 +47,28 @@ public class cameraControl : MonoBehaviour {
         if (Input.GetKey("a"))
         {
             //centerView.x += 1;
-            centerView.x -= Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y);
-            centerView.z += Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y);
+            centerView.x -= Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y)* moveSpeed;
+            centerView.z += Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
 
         }
         if (Input.GetKey("d"))
         {
             //centerView.x -= 1;
-            centerView.x += Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y);
-            centerView.z -= Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y);
+            centerView.x += Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
+            centerView.z -= Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
 
         }
         if (Input.GetKey("w"))
         {
             //centerView.z -= 1;
-            centerView.x += Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y);
-            centerView.z += Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y);
+            centerView.x += Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
+            centerView.z += Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
         }
         if (Input.GetKey("s"))
         {
             //centerView.z += 1;
-            centerView.x -= Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y);
-            centerView.z -= Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y);
+            centerView.x -= Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
+            centerView.z -= Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.y) * moveSpeed;
         }
         
         /*

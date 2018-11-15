@@ -1,8 +1,20 @@
 [X] Add capacity when building houses 
 
-[]make simple metric for attracting people
+[] make simple metric for attracting people(not all at once)
 
-[X]spawn people 
+[X] spawn people 
 
-[]make then go to the house
+[X] make people go to the house
+
+[] click on buildings and get information
+
+[] click on units and get information
+
+[] remove buildings
+
+[] some units are stuck at spawn point
+
+[] sometimes more units are spawn than there are houses for
+
+[] fix collision with houses
 
