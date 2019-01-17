@@ -12,9 +12,12 @@
 
 [] remove buildings
 
-[] some units are stuck at spawn point
+[X] some units are stuck at spawn point
 
-[] sometimes more units are spawn than there are houses for
+[X] sometimes more units are spawn than there are houses for
 
 [] fix collision with houses
 
+[] homeless and atHome does not change from false (only for units that never found a home)
+
+[] units never get status "toHome", check why. Same with homeless I think
