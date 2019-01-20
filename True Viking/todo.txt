@@ -1,20 +1,28 @@
+-------Done---------------
 [X] Add capacity when building houses 
-
-[] make simple metric for attracting people(not all at once)
 
 [X] spawn people 
 
-[X] make people go to the house
+[X] fix collision with houses
+---------Todo-----------------
 
-[] click on buildings and get information
+[] Add an entry point next to building that people go to
 
-[] click on units and get information
+[] click on object and get gameobject
+	[] click on buildings and get information
+	[] click on units and get information
+	[] remove buildings
+[] make simple metric for attracting people(not all at once)
 
-[] remove buildings
+
+[/] make people go to the house(not working with new mesh)
+
+[] implement resource system
+-------Bugs---------------
 
 [] some units are stuck at spawn point
 
 [] sometimes more units are spawn than there are houses for
 
-[] fix collision with houses
+
 

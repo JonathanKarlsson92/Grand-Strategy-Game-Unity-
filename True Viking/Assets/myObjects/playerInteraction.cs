@@ -23,7 +23,7 @@ public class playerInteraction : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log("we hit" + hit.collider.name + " " + hit.point);
+                //Debug.Log("we hit" + hit.collider.name + " " + hit.point);
             }
         }
     }

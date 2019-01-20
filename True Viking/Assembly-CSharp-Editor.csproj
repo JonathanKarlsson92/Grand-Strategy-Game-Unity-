@@ -61,6 +61,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\Utilities\DependencyCore\DependencyAnalytics.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\Utilities\DependencyCore\ScriptData.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\Utilities\Layout\Edge.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\Utilities\Layout\ForceLayoutGraph.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\Utilities\Layout\Graph.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\Utilities\Layout\Node.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\WindowScripts\ScriptDependencyWindow.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\WindowScripts\Serializer.cs" />
+    <Compile Include="Assets\BlackPeaStudios\ScriptDependencyVisualizer\Editor\WindowScripts\WindowUtilities.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
@@ -397,6 +406,22 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{2291E87C-3B4E-D86A-26AF-4DE2D15B946A}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsExamplesEditor.csproj">
+      <Project>{8221B2AF-D7DE-F929-4C9C-46774D622262}</Project>
+      <Name>NavMeshComponentsExamplesEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{7BAB546E-FAF6-252A-BB76-920B6422FA44}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{F69654AC-35A6-5F77-2A5C-C494B2308ED1}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsExamples.csproj">
+      <Project>{BE759E90-E85A-2CBA-DE6B-C410EBE9C3BA}</Project>
+      <Name>NavMeshComponentsExamples</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

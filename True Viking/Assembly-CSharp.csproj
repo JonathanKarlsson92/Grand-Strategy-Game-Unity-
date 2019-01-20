@@ -109,6 +109,7 @@
     <Compile Include="Assets\myObjects\buildingProperty.cs" />
     <Compile Include="Assets\myObjects\buildManager.cs" />
     <Compile Include="Assets\myObjects\cameraControl.cs" />
+    <Compile Include="Assets\myObjects\collisionScript.cs" />
     <Compile Include="Assets\myObjects\humanAnimator.cs" />
     <Compile Include="Assets\myObjects\humanMotor.cs" />
     <Compile Include="Assets\myObjects\mainMenu.cs" />
@@ -121,7 +122,6 @@
     <Compile Include="Assets\myObjects\roadNetwork.cs" />
     <Compile Include="Assets\myObjects\simulationTimer.cs" />
     <Compile Include="Assets\myObjects\startBuilder.cs" />
-    <Compile Include="Assets\myObjects\toggleBuildings.cs" />
     <Compile Include="Assets\myObjects\treeProperties.cs" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -168,6 +168,7 @@
     <None Include="Assets\Environment\Particles\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\Environment\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\NavMeshComponents\ProjectSettings\ProjectVersion.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/jonat/Documents/Git projects/Unity/Grand-Strategy-Game-Unity-/True Viking/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -411,6 +412,24 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NavMeshComponentsExamplesEditor.csproj">
+      <Project>{8221B2AF-D7DE-F929-4C9C-46774D622262}</Project>
+      <Name>NavMeshComponentsExamplesEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{7BAB546E-FAF6-252A-BB76-920B6422FA44}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{F69654AC-35A6-5F77-2A5C-C494B2308ED1}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsExamples.csproj">
+      <Project>{BE759E90-E85A-2CBA-DE6B-C410EBE9C3BA}</Project>
+      <Name>NavMeshComponentsExamples</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
