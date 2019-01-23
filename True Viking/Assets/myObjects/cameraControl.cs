@@ -14,7 +14,7 @@ public class cameraControl : MonoBehaviour {
     public float pitch = 2f;
 
     private float minZoom = 5f;
-    private float maxZoom = 50f;
+    private float maxZoom = 100f; //increase to go further away
 
     private float currentZoom = 40f;  
     private float currentYaw = 0f;

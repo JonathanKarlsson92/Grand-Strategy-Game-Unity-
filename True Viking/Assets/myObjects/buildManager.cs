@@ -10,13 +10,13 @@ public class buildManager : MonoBehaviour {
 
     // public id
     public GameObject spawnee; //temp object
+    public bool isBuilding = false;
+    public int buildID;
+    public List<GameObject> createdObjects = new List<GameObject>();
+
     //public GameObject spawneeSupport; //temp object help for walls and roads etc
     private GameObject newBuild; //object to store
     private GameObject newBuildSupport; //support object to store
-    private bool isBuilding = false;
-    public int buildID;
-    // list that holds all created objects - deleate all instances if desired
-    public List<GameObject> createdObjects = new List<GameObject>();
     private Vector3 prevPos; //store last position when building roads, walls etc
     private bool startNode=false;
     private Quaternion buildRotation;
@@ -45,8 +45,8 @@ public class buildManager : MonoBehaviour {
             // Bit shift the index of the layer (15) to get a bit mask
             int layerMask = 1 << 15; //choose building layer or other
 
-            // This would cast rays only against colliders in layer 8.
-            // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
+            // This would cast rays only against colliders in layer 15.
+            // But instead we want to collide against everything except layer 15. The ~ operator does this, it inverts a bitmask.
             layerMask = ~layerMask;
 
             
@@ -69,7 +69,7 @@ public class buildManager : MonoBehaviour {
 
             //visualize objects on ground while building
             //newBuild.transform.rotation = Quaternion.Euler(buildRotation);
-
+            //Debug.Log(transform.parent.name);
             newBuild.transform.position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
 
             /*if (buildID > 4) //temporary, change this such that it appies to current building
@@ -125,7 +125,7 @@ public class buildManager : MonoBehaviour {
                                                     //newBuild.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 2.0f, 1.0f, 1.0f);
                                                     //newBuild.GetComponent<BoxCollider>().enabled = true;
                     newBuild.transform.parent = transform.root.Find("Buildings");
-
+                    //newBuild.GetComponent<MeshCollider>().enabled = true;
 
                     //newBuildSupport = Instantiate(spawneeSupport);
                     if (buildID > 4)
@@ -193,8 +193,12 @@ public class buildManager : MonoBehaviour {
             newBuild.name = nameGenerator();//get unique name
             newBuild.transform.parent = transform.root.Find("Buildings");
             newBuild.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 2.0f, 1.0f, 1f); //set color of temp house
-            //newBuild.GetComponent<BoxCollider>().enabled = true;
+            //newBuild.GetComponent<MeshCollider>().enabled = false;
         }
+    }
+    public void activateBuilder(int buildID) //called from activateBuildManager
+    {
+        
     }
     private string nameGenerator()
     {
@@ -202,6 +206,7 @@ public class buildManager : MonoBehaviour {
         return "building" + buildingCounter.ToString();
 
     }
+    
 }
 
 

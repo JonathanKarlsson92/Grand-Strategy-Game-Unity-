@@ -43,13 +43,15 @@ public class populationManager : MonoBehaviour {
         {
             int r= rnd.Next(1, 100);
                 //Debug.Log(r);
-            if ( r> 95) //1% chance every frame
+            if ( r> 80) //1% chance every frame
             {
-               
+
                 //Debug.Log("person moving in!");
 
                 //spawn people
-                newPerson = Instantiate(spawnee, new Vector3(5, 7, 100), Quaternion.identity);
+                newPerson = Instantiate(spawnee, new Vector3(5, 7, 100), Quaternion.identity); //hard coded
+                //newPerson = Instantiate(spawnee);
+                //Debug.Log(transform.Find("PopulationSpawner").position);
                 newPerson.name = nameGenerator();
                 newPerson.transform.parent = transform.Find("People");
                 popChange += 1;
@@ -91,23 +93,12 @@ public class populationManager : MonoBehaviour {
         return null;
         
     }
-    public void addInHouse(GameObject person)
+ 
+
+    public static void addInHouse(GameObject person) //add gameobject to house
     {
-        Transform houseList = transform.Find("Buildings");
-        for (int i = 0; i < houseList.childCount; i++)
-        {
-            //go through all people(works)
-            GameObject house = houseList.GetChild(i).gameObject;
-            if (house.GetComponent<buildingProperty>().populationCapacity > house.GetComponent<buildingProperty>().inhabitants.Count) //if free space in building
-            {
-                house.GetComponent<buildingProperty>().addPerson(person); //add person in house
-                //return house;
-
-            }
-
-            //Debug.Log(person.transform.position);
-        }
-        //return null; //if nothing is found
+        GameObject house=person.GetComponent<humanMotor>().house;
+        house.GetComponent<buildingProperty>().addPerson(person); //add to house list
     }
     private string nameGenerator()
     {
@@ -123,10 +114,30 @@ public class populationManager : MonoBehaviour {
         Destroy(peopleList.transform.Find(person.name));
     }
 
-    public static void addPopulation()
+    public static void addPopulation() //arrived at house
     {
         population += 1;
         popChange -= 1;
     }
     
 }
+
+
+/*public void addInHouse(GameObject person) //obsolete
+{
+    Transform houseList = transform.Find("Buildings");
+    for (int i = 0; i < houseList.childCount; i++)
+    {
+        //go through all people(works)
+        GameObject house = houseList.GetChild(i).gameObject;
+        if (house.GetComponent<buildingProperty>().populationCapacity > house.GetComponent<buildingProperty>().inhabitants.Count) //if free space in building
+        {
+            house.GetComponent<buildingProperty>().addPerson(person); //add person in house
+                                                                      //return house;
+
+        }
+
+        //Debug.Log(person.transform.position);
+    }
+    //return null; //if nothing is found
+}*/

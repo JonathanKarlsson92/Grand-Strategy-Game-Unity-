@@ -20,9 +20,26 @@
 [] implement resource system
 -------Bugs---------------
 
+<<<<<<< HEAD
 [] some units are stuck at spawn point
 
 [] sometimes more units are spawn than there are houses for
 
 
 
+=======
+[X] some units are stuck at spawn point
+
+[X] sometimes more units are spawn than there are houses for
+
+[X] fix collision with houses
+      collision with triggers, rigid bodies added to buildings
+      
+[X] homeless and atHome does not change from false (only for units that never found a home)
+    Works now, typo in code
+    
+[X] units never get status "toHome", check why. Same with homeless I think
+    Works now, typo in code
+    
+[ ] Collision bug with the bigger house
+>>>>>>> d524bd7eb651c2721bc8901f955ac105d232336e

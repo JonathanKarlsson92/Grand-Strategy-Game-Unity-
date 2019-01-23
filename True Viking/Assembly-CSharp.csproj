@@ -106,8 +106,10 @@
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\myObjects\activateBuildManager.cs" />
     <Compile Include="Assets\myObjects\buildingProperty.cs" />
     <Compile Include="Assets\myObjects\buildManager.cs" />
+    <Compile Include="Assets\myObjects\buildManager2.cs" />
     <Compile Include="Assets\myObjects\cameraControl.cs" />
     <Compile Include="Assets\myObjects\collisionScript.cs" />
     <Compile Include="Assets\myObjects\humanAnimator.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Assets\myObjects\simulationTimer.cs" />
     <Compile Include="Assets\myObjects\startBuilder.cs" />
     <Compile Include="Assets\myObjects\treeProperties.cs" />
+    <Compile Include="Assets\myObjects\UIManager.cs" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\Fog.shader" />

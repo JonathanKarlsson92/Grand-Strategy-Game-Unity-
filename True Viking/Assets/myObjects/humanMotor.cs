@@ -15,13 +15,15 @@ public class humanMotor : MonoBehaviour {
     public int age;
     public string status = "Nothing"; //MoveIn, Home, (Working), (MoveOut)
 
-    private Vector3 spawnPoint=new Vector3(5f,7f,100f);
-    
+    //private Vector3 spawnPoint=new Vector3(5f,7f,100f); //spawn point for person(working)
+    private Vector3 spawnPoint;
 
     //Random rnd = new Random();
     // Use this for initialization
     void Start () {
         populationManager parentScript = this.transform.parent.GetComponent<populationManager>();
+        Debug.Log(transform.parent.transform.Find("PopulationSpawner").position);
+        spawnPoint=transform.parent.transform.Find("PopulationSpawner").position;
     }
 	
 	// Update is called once per frame
@@ -42,6 +44,7 @@ public class humanMotor : MonoBehaviour {
                 homeless = false; //this one sets
                 atHome = true;
                 populationManager.addPopulation();
+                populationManager.addInHouse(transform.gameObject);
                 
             }
         }
@@ -74,7 +77,7 @@ public class humanMotor : MonoBehaviour {
         status = "MoveIn";
         homeless = true;
         agent = GetComponent<NavMeshAgent>();
-        agent.Warp(spawnPoint); //WARNING HARD CODED
+        agent.Warp(transform.parent.transform.Find("PopulationSpawner").position); //WARNING HARD CODED
         agent.SetDestination(destination);
         
         //Debug.Log("MISSION IS:"+status);
