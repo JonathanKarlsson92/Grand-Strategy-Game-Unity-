@@ -13,6 +13,7 @@ public class humanMotor : MonoBehaviour {
     public bool atHome=false;
     
     public int age;
+    public int wealth;
     public string status = "Nothing"; //MoveIn, Home, (Working), (MoveOut)
 
     //private Vector3 spawnPoint=new Vector3(5f,7f,100f); //spawn point for person(working)
@@ -22,7 +23,7 @@ public class humanMotor : MonoBehaviour {
     // Use this for initialization
     void Start () {
         populationManager parentScript = this.transform.parent.GetComponent<populationManager>();
-        Debug.Log(transform.parent.transform.Find("PopulationSpawner").position);
+        //Debug.Log(transform.parent.transform.Find("PopulationSpawner").position);
         spawnPoint=transform.parent.transform.Find("PopulationSpawner").position;
     }
 	
@@ -82,5 +83,13 @@ public class humanMotor : MonoBehaviour {
         
         //Debug.Log("MISSION IS:"+status);
         //agent.SetDestination(destination);
+    }
+    public void setWealth(int wealth)
+    {
+        this.wealth = wealth;
+    }
+    public void setAge(int age)
+    {
+        this.age = age;
     }
 }

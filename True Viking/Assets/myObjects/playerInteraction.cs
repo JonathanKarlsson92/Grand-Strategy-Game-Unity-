@@ -31,11 +31,13 @@ public class playerInteraction : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 //if target is a building
-                Debug.Log(transform.name);
-                Debug.Log(transform.GetComponent<buildManager2>().isBuilding);
+                //Debug.Log(transform.name);
+                //Debug.Log(transform.GetComponent<buildManager2>().isBuilding);
+
 
                 if (transform.GetComponent<buildManager2>().isBuilding == false) //attached to master
                 {
+                    Transform a = transform.Find("Object Panel");
                     //get gameobject
                     GameObject building = hit.transform.gameObject;
                     //store name and building properties
@@ -54,8 +56,9 @@ public class playerInteraction : MonoBehaviour {
                 }
 
             }else{
-                objectText.text = "";
-                transform.GetComponent<UIManager>().objectText = objectText;
+                Transform a = transform.Find("Object Panel");
+                //objectText.text = "";
+                //transform.GetComponent<UIManager>().objectText = objectText;
             }
         }
     }

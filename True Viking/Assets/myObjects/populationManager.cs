@@ -21,8 +21,8 @@ public class populationManager : MonoBehaviour {
     private GameObject emptyHouse;
 
     private int peopleCounter=0;
-    
 
+    private int r; //random variable
     System.Random rnd = new System.Random();
 
     //private Transform populationSpawner = transform.Find("populationSpawner");
@@ -38,23 +38,27 @@ public class populationManager : MonoBehaviour {
        //update UI
        populationText.text = population.ToString()+"/"+houseCapacity.ToString()+ "+"+popChange;
 
-        //quick test to spawn people up to houseCapacity
+        //Spawn people up to houseCapacity
         if (population+popChange < houseCapacity)
         {
-            int r= rnd.Next(1, 100);
-                //Debug.Log(r);
-            if ( r> 80) //1% chance every frame
+            r= rnd.Next(1, 100);
+            if ( r> 90) //1% chance every frame
             {
 
                 //Debug.Log("person moving in!");
 
                 //spawn people
                 newPerson = Instantiate(spawnee, new Vector3(5, 7, 100), Quaternion.identity); //hard coded
-                //newPerson = Instantiate(spawnee);
-                //Debug.Log(transform.Find("PopulationSpawner").position);
+                
+                //set properties
                 newPerson.name = nameGenerator();
                 newPerson.transform.parent = transform.Find("People");
-                popChange += 1;
+
+                r = rnd.Next(100, 200);
+                newPerson.GetComponent<humanMotor>().setWealth(100);
+
+                r = rnd.Next(10, 40);
+                newPerson.GetComponent<humanMotor>().setAge(r);
 
                 // find house
                 newPerson.GetComponent<humanMotor>().house = findFreeHouse(newPerson); //assign house, null if nothing is found
@@ -62,6 +66,8 @@ public class populationManager : MonoBehaviour {
                 //set misson
                 //newPerson.GetComponent<humanMotor>().status = "MoveIn";
                 newPerson.GetComponent<humanMotor>().setMissionMoveIn(newPerson.GetComponent<humanMotor>().house.transform.position); //move in
+
+                popChange += 1;
             }
 
         }
